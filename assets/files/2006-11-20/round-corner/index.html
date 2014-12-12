@@ -1,0 +1,99 @@
+<html>
+<head>
+
+<title>CSSだけで角丸</title>
+
+<style type="text/css">
+
+/* 角を丸くするボックス */
+.round {
+	display : block ;
+	background : #0080FF ;
+}
+
+/* 角丸の共通設定 */
+.round:before,
+.round:after {
+	display : block ;
+	margin : 0 ;
+	padding : 0 ;
+	text-align : left ;
+}
+
+
+/* 角丸の上の方 */
+.round:before {
+	content : url("./nw.gif") ;
+	background : transparent url("./ne.gif") no-repeat scroll 100% 0% ;
+}
+
+/* 角丸の下の方 */
+.round:after {
+	content : url("./sw.gif") ;
+	background : transparent url("./se.gif") no-repeat scroll 100% 0% ;
+}
+
+/* ここから下はおまけ */
+h1 {
+	font-size : 3em ;
+	font-family : serif ;
+}
+
+div {
+	margin : 1em ;
+}
+
+.round p {
+	text-align : center ;
+	color : #FFF ;
+}
+
+/* ボックスモデル */
+.box {
+	border : 3px #000 solid ;
+}
+
+.box:before,
+.box:after {
+	display : block ;
+	margin : 0 ;
+	padding : 0 ;
+}
+
+.box:before {
+	height : 3em ;
+	content : "before疑似要素のボックス" ;
+	border : 3px #CCC solid ;
+}
+
+.box:after {
+	height : 3em ;
+	content : "after疑似要素のボックス" ;
+	border : 3px #CCC solid ;
+}
+
+</style>
+
+</head>
+<body>
+
+<h1>空繰再繰</h1>
+
+<h2>CSSだけで角丸</h2>
+
+<div class="round">
+<p>CSS2を正しくサポートしたブラウザで意図した通りに表示されます。</p>
+<p>
+	before,after疑似要素とcontentプロパティをサポートしていないブラウザ<br>
+	(IE6とかIE6とかIE6とか)ではうまいこといきません。
+</p>
+</div>
+
+<h2>ボックスモデル</h2>
+
+<div class="box">
+ボックスの中身
+</div>
+
+</body>
+</html>

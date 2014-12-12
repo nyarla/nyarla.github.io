@@ -1,0 +1,973 @@
+script[type="text/mustache"] {
+    display : none ;
+}
+
+.pure-u-1-2 .pure-u-12-24 {
+    width : 49% ;   
+}
+
+@-moz-document url-prefix() {
+    rt:before,
+    rt:after {
+        display : inline ;
+    }
+    
+    rt:before {
+        content : '(' ;
+    }
+    
+    rt:after {
+        content : ')' ;
+    }
+}
+
+_:-o-prefocus, body:last-child rt:before.
+_:-o-prefocus, body:last-child rt:after {
+    display : inline ; 
+}
+    
+_:-o-prefocus, body:last-child rt:before {
+    content : '(' ;
+}
+    
+_:-o-prefocus, body:last-child rt:after {
+    content : ')' ;
+}
+
+html {
+    background-color : #F8F8F6 ;
+}
+
+body {
+    width : 91% ;
+    margin : 0 auto ;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OTJBQkFGRUZFOTIyMTFFMEJDRDNEQzkxOTVGOTNBODAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OTJBQkFGRjBFOTIyMTFFMEJDRDNEQzkxOTVGOTNBODAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5MkFCQUZFREU5MjIxMUUwQkNEM0RDOTE5NUY5M0E4MCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5MkFCQUZFRUU5MjIxMUUwQkNEM0RDOTE5NUY5M0E4MCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtrV+I8AAAAQSURBVHjaYvj//z8DQIABAAj8Av7bok0WAAAAAElFTkSuQmCC',sizingMethod=crop);
+    zoom: 1 ;
+    -webkit-text-size-adjust: 100%;
+}
+
+a:link      { color : #204A87 ; }
+a:visited   { color : #5C3566 ; }
+a:hover     { color : #EF2929 ; }
+a:active    { color : #EF2929 ; }
+
+#tumblr-title {
+    font-size : 3em ;
+    font-family : serif ;
+}
+
+#tumblr-title a {
+    text-decoration : none ;
+    font-weight : bold ;
+}
+
+
+#tumblr-title a:link,
+#tumblr-title a:visited {
+    color : #2E3436 ;
+    
+}
+#tumblr-title a:hover,
+#tumblr-title a:active {
+    color : #000000 ;
+    text-shadow : 0px 0px 2px #000000 ;
+}
+
+#tumblr-description {
+    font-size : 1em ;
+    margin : 0em auto 3em auto ;
+}
+
+header[role="banner"] {
+    text-align : center ;
+}
+
+nav.permalink {
+    margin : 0 0 0 -2em ;
+}
+
+nav.permalink a {
+    display : inline-block ;
+
+    font-size : 2em ;
+    line-height : 1em ;
+    width : 2em ;
+    
+    text-align : center ;
+    text-shadow : 0px 1px 1px rgba( 0, 0, 0, 0.5 ) ;
+}
+
+section[role="main"] {
+    margin : -3em 0 2em 2em ;
+}
+
+section[role="main"] h1[role="heading"] {
+    margin : 0 ;  
+    line-height : 2em ;
+    font-size : 2em ;
+}
+
+section[role="main"] h1[role="heading"] a {
+    text-decoration : none ;
+}
+
+article.post {
+    margin-bottom : 4em ;
+}
+
+article.text nav.permalink a:link           { color : #3465A4 ; }
+article.text nav.permalink a:visited        { color : #204A87 ; }
+article.text nav.permalink a:hover,
+article.text nav.permalink a:active         { color : #EF2929 ; }
+
+article.link nav.permalink a:link           { color : #FCE94F ; }
+article.link nav.permalink a:visited        { color : #C4A000 ; }
+article.link nav.permalink a:hover,
+article.link nav.permalink a:active         { color : #EF2929 ; }
+
+article.photo nav.permalink a:link          { color : #888A85 ; }
+article.photo nav.permalink a:visited       { color : #2E3436 ; }
+article.photo nav.permalink a:hover,
+article.photo nav.permalink a:active        { color : #EF2929 ; }
+
+article.photoset nav.permalink a:link       { color : #888A85 ; }
+article.photoset nav.permalink a:visited    { color : #2E3436 ; }
+article.photoset nav.permalink a:hover,
+article.photoset nav.permalink a:active     { color : #EF2929 ; }
+
+article.panorama nav.permalink a:link       { color : #888A85 ; }
+article.panorama nav.permalink a:visited    { color : #2E3436 ; }
+article.panorama nav.permalink a:hover,
+article.panorama nav.permalink a:active     { color : #EF2929 ; }
+
+article.chat nav.permalink a:link           { color : #8AE234 ; }
+article.chat nav.permalink a:visited        { color : #4E9A06 ; }
+article.chat nav.permalink a:hover,
+article.chat nav.permalink a:active         { color : #EF2929 ; }
+
+article.quote nav.permalink a:link          { color : #BABDB6 ; }
+article.quote nav.permalink a:visited       { color : #888A85 ; }
+article.quote nav.permalink a:hover,
+article.quote nav.permalink a:active        { color : #EF2929 ; }
+
+article.audio nav.permalink a:link          { color : #EF3939 ; }
+article.audio nav.permalink a:visited       { color : #A40000 ; }
+article.audio nav.permalink a:hover,
+article.audio nav.permalink a:active        { color : #EF2929 ; }
+
+article.video nav.permalink a:link          { color : #888A85 ; }
+article.video nav.permalink a:visited       { color : #2E3436 ; }
+article.video nav.permalink a:hover,
+article.video nav.permalink a:active        { color : #EF2929 ; }
+
+article.answer nav.permalink a:link         { color : #729FCF ; }
+article.answer nav.permalink a:visited      { color : #204A87 ; }
+article.answer nav.permalink a:hover,
+article.answer nav.permalink a:active       { color : #EF2929 ; }
+
+article.photo section[role="main"] figure[role="img"] img,
+article.photo section[role="main"] figure[role="img"] iframe,
+article.audio section[role="main"] figure[role="article"] div.player.music iframe,
+article.video section[role="main"] figure[role="article"] div.player iframe {
+    border : 6px solid #FFFFFF !important;
+    border-radius : 0px !important;
+    box-shadow : 0px 1px 3px 0px #000000 ;
+}
+
+@media screen and (min-width: 64em) {
+    article.photo section[role="main"] figure[role="img"],
+    article.audio section[role="main"] figure[role="article"] {
+        margin : 0 auto 0 0 ;
+    }
+    
+    article.photo section[role="main"] section.content,
+    article.audio section[role="main"] section.content {
+        margin : 0 0 0 auto ;
+    }
+}
+
+article.chat section[role="main"] ol {
+    padding-left : 0 ;
+}
+
+article.chat section[role="main"] ol li {
+    padding : 0.25em 0.5em ;
+    list-style : none ;
+    border-width : 0px 0px 1px 6px ;
+    border-style : none none dashed solid ; 
+}
+
+article.chat section[role="main"] ol li.odd {
+    border-color : #729FCF ;
+}
+
+article.chat section[role="main"] ol li.even {
+    border-color : #EDD400 ;
+}
+
+article.chat section[role="main"] ol li em.label {
+    font-style : normal ;
+    font-weight : bold ;
+}
+
+article.answer p.asker img {
+    margin-right : 0.5em ;
+    border : 1px solid #BABDB6 ;
+    border-radius : 24px 0px 24px 24px ;
+    vertical-align : middle ;
+}
+
+article.answer p.asker a {
+    display : inline-block ;
+    height : 24px ;
+    
+    vertical-align : middle ;
+    
+    color : #000000 ;
+}
+
+article.answer p.asker a:link,
+article.answer p.asker a:visited {
+    text-decoration : none ;
+}
+article.answer p.asker a:hover,
+article.answer p.asker a:active {
+    text-decoration : underline ;
+}
+
+section.content > * {
+    font-family : 'Gentium Book Basic', Georgia, serif ;
+    font-weight : 400 ;
+    
+}
+
+section.content blockquote,
+article.answer blockquote.question {
+    border-left : 6px solid #AD7FA8 ;
+    margin-left : 0.5em ;
+    padding-left : 0.5em ;
+}
+
+section.content > p > img:only-child,
+section.content > p > a > img:only-child {
+    display : block ;
+    width : 62% ;
+    margin-left : auto ;
+    margin-right : auto ;
+    border : 6px solid #FFFFFF ;
+    background-color : #FFFFFF ;
+    box-shadow : 0px 1px 3px #888A85 ;
+}
+
+section.content > dl dt,
+section.content > dl dd {
+    margin-top : 0.125em ;
+    margin-bottom : 0.125em ;
+    padding-left : 0.5em ;
+    border-left : 6px solid ;
+}
+
+section.content > dl dt {
+    border-color : #8AE234 ;
+}
+
+section.content > dl dd {
+    border-color : #E9B96E ;
+}
+
+section.content ul li ul,
+section.content ul li ol,
+section.content ul li dl,
+section.content ol li ul,
+section.content ol li ol,
+section.content ol li dl,
+section.content dl dd ul,
+section.content dl dd ol,
+section.content dl dd dl {
+    margin-top : 0 ;
+    margin-bottom : 0 ;
+}
+
+section.content pre,
+section.content .gist .gist-file {
+    padding : 0.5em 0 ;
+
+    border-width : 6px 0 ;
+    border-style : solid ;
+    border-color : #729FCF ;
+    border-radius : 0px ;
+}
+
+section.content pre code,
+section.content .gist .gist-data {
+    font-size : 0.8em ;
+}
+
+section.content .gist {
+    color : #2E3436 ;
+}
+
+section.content .gist .render-container .render-viewer-error,
+section.content .gist .render-container .render-viewer-fatal,
+section.content .gist .render-container .octospinner {
+    display : none;
+}
+
+section.content .gist .gist-render iframe {
+    width : 100% ;
+}
+
+section.content .gist pre,
+section.content .gist .gist-file,
+section.content .gist .gist-file .gist-data .line-pre,
+section.content .gist .gist-file .gist-data .line-number {
+    font-family : 'Inconsolata', monospace ;
+}
+
+section.content .gist .gist-file .gist-meta {
+    padding : 0 ;
+
+    font-size : 0.8em ;
+    font-family : 'Gentium Book Basic', Georgia, serif ;
+    font-weight : 400 ;
+
+    text-shadow : none ;
+
+    color : #000000 ;
+    background-color : transparent ;
+    background-image : none ;
+}
+
+section.content .gist .gist-file .gist-meta a {
+    font-weight : 400 ;
+    text-decoration : none ;
+}
+
+section.content .gist .gist-file .gist-meta a:link {
+    color : #555A85 ;
+}
+
+section.content .gist .gist-file .gist-meta a:visited {
+    color : #555A85 ;
+}
+
+section.content .gist .gist-file .gist-meta a:hover {
+    color : #EF2929 ;
+}
+
+section.content .gist .gist-file .gist-meta a:active {
+    color : #EF2929 ;
+}
+
+section.content .gist .gist-file .gist-data {
+    background-color : transparent ;
+    border : none ;
+}
+
+section.content .gist .gist-file .gist-data .line-pre {
+    background : transparent !important ;
+    border : none !important ;
+    margin : 0 !important ;
+    padding : 0 !important ;
+}
+
+section.content .gist .gist-file .gist-data .line-numbers {
+    background-color: transparent ;
+    color : #888A85 ;
+    border-right : 1px dashed #D3D7CF;
+}
+
+section.content .hljs {
+    display : block ;
+}
+
+/* Comment */
+section.content .hljs-comment,
+section.content .hljs-template_comment,
+section.content .diff .hljs-header,
+section.content .hljs-javadoc {
+    color : #204A87 ;
+    font-style : italic ;
+}
+
+/* Keyboard */
+section.content .hljs-keyword,
+section.content .css .rule .hljs-keyword,
+section.content .hljs-winutils,
+section.content .javascript .hljs-title,
+section.content .nginx .hljs-title,
+section.content .hljs-subst,
+section.content .hljs-request,
+section.content .hljs-status {
+    color : #C4A000 ;
+    font-weight : bold ;
+}
+
+/* Number */
+section.content .hljs-number,
+section.content .hljs-hexcolor,
+section.content .ruby .hljs-constant {
+    color: #4E9A06;
+}
+
+/* String */
+section.content .hljs-string,
+section.content .hljs-tag .hljs-value,
+section.content .hljs-phpdoc,
+section.content .tex .hljs-formula {
+    color : #A40000 ;
+}
+
+/* ID, Title */
+section.content .hljs-title,
+section.content .hljs-id,
+section.content .coffeescript .hljs-params,
+section.content .scss .hljs-preprocessor {
+    color : #A40000 ;
+    font-weight : bold ;
+}
+
+section.content .javascript .hljs-title,
+section.content .lisp .hljs-title,
+section.content .clojure .hljs-title,
+section.content .hljs-subst {
+    font-weight : normal ;
+}
+
+/* Literal */
+section.content .hljs-class .hljs-title,
+section.content .haskell .hljs-type,
+section.content .vhdl .hljs-literal,
+section.content .tex .hljs-command {
+    color : #204A87 ;
+    font-weight : bold ;
+}
+
+section.content .hljs-tag,
+section.content .hljs-tag .hljs-title,
+section.content .hljs-rules .hljs-property,
+section.content .django .hljs-tag .hljs-keyword {
+    color : #0000A4 ;
+    font-weight : normal ;
+}
+
+/* Attribute */
+section.content .hljs-attribute,
+section.content .hljs-variable,
+section.content .lisp .hljs-body {
+    color: #009A9A ;
+}
+
+/* Regexp */
+section.content .hljs-regexp {
+    color: #4e9A06 ;
+}
+
+/* Symbol */
+section.content .hljs-symbol,
+section.content .ruby .hljs-symbol .hljs-string,
+section.content .lisp .hljs-keyword,
+section.content .tex .hljs-special,
+section.content .hljs-prompt {
+    color: #5C3566 ;
+}
+
+/* Builtin */
+section.content .hljs-built_in,
+section.content .lisp .hljs-title,
+section.content .clojure .hljs-built_in {
+    color: #729FCF ;
+}
+
+/* Preproc */
+section.content .hljs-preprocessor,
+section.content .hljs-pragma,
+section.content .hljs-pi,
+section.content .hljs-doctype,
+section.content .hljs-shebang,
+section.content .hljs-cdata {
+    color: #204A87 ;
+    font-weight: bold
+}
+
+/* Diff.Deleted */
+section.content .hljs-deletion {
+    background-color : #4E9A06 ;
+    color : #EEEEEC ;
+}
+
+/* Diff.Added */
+section.content .hljs-addition {
+    background-color : #EF2929 ;
+    color : #EEEEEC ;
+}
+
+/* Diff.Changed */
+section.content .diff .hljs-change {
+    background-color : #729FCF ;
+}
+
+/* Chunk */
+section.content .hljs-chunk {
+    color : #BABDB6 ;
+}
+
+section.content .gist-syntax {
+    background-color : transparent !important;
+}
+
+section.content .gist-syntax .c {
+    color : #204A87 ;
+}
+
+/* Comment */
+section.content .gist-syntax .cm {
+    color : #204A87 ;
+}
+
+/* Comment.Multiline */
+section.content .gist-syntax .cp {
+    color : #204A87 ;
+}
+
+/* Comment.Preproc */
+section.content .gist-syntax .c1 {
+    color : #204A87 ;
+}
+
+/* Comment.Single */
+section.content .gist-syntax .cs {
+    color : #5C3566 ;
+}
+
+/* Commsne.Special  */
+
+section.content .gist-syntax .err {
+    color : #EEEEEC ;
+    background-color : #EF2929 ;
+}
+
+/* Error */
+
+section.content .gist-syntax .k {
+    color : #C4A000 ;
+}
+
+/* Keyboard */
+section.content .gist-syntax .kc {
+    color : #4E9A06 ;
+}
+
+/* Keyboard.Constant */
+section.content .gist-syntax .kd {
+    color : #4E9A06 ;
+}
+
+/* Keyword.Declaration */
+section.content .gist-syntax .kp {
+    color : #5C3566 ;
+}
+
+/* Keyword.Pseudo */
+section.content .gist-syntax .kr {
+    color : #C4A000 ;
+}
+
+/* Keyword.Reserved */
+section.content .gist-syntax .kt {
+    color : #4E9A06 ;
+}
+
+/* Keyword.Type */
+
+section.content .gist-syntax .o {
+    color : #4E9A06 ;
+}
+
+/* Operator */
+section.content .gist-syntax .ow {
+    color : #2E3436 ;
+}
+
+/* Operator.Word */
+section.content .gist-syntax .gd {
+    color : #EEEEEC ;
+    background-color : #EF2929 ;
+}
+
+/* Generic.Deleted */
+section.content .gist-syntax .gd .x {
+    color : #EEEEEC ;
+    background-color : #EF2929 ;
+}
+
+/* Generic.Deleted.Specific */
+section.content .gist-syntax .ge {
+    color : #000000 ;
+}
+
+/* Generic.Emph */
+section.content .gist-syntax .gr {
+    color : #A40000 ;
+}
+
+/* Generic.Error */
+section.content .gist-syntax .gh {
+    color : #888A85 ;
+}
+
+/* Generic.Heading */
+section.content .gist-syntax .gi {
+    color : #EEEEEC ;
+    background-color : #4E9A06 ;
+}
+
+/* Generic.Inserted */
+section.content .gist-syntax .gi .x {
+    color : #EEEEEC ;
+    background-color : #4E9A06 ;
+}
+
+/* Generic.Inserted.Specific */
+section.content .gist-syntax .go {
+    color : #888A85 ;
+}
+
+/* Generic.Output */
+section.content .gist-syntax .gp {
+    color : #2E3436 ;
+}
+
+/* Generic.Prompt */
+section.content .gist-syntax .gu {
+    color : #C4A000 ;
+}
+
+/* Generic.Subheading */
+section.content .gist-syntax .gt {
+    color : #A40000 ;
+}
+
+/* Generic.Traceback */
+
+section.contnet .gist-syntax .na {
+    color : #009A9A ;
+}
+
+/* Name.Attribute */
+section.content .gist-syntax .nb {
+    color : #729FCF ;
+}
+
+/* Name.Builtin */
+section.content .gist-syntax .nc {
+    color : #204A87 ;
+}
+
+/* Name.Class */
+section.content .gist-syntax .no {
+    color : #009A9A ;
+}
+
+/* Name.Constant */
+section.content .gist-syntax .ni {
+    color : #5C3566 ;
+}
+
+/* Name.Entity */
+section.content .gist-syntax .ne {
+    color : #A40000 ;
+}
+
+/* Name.Exception */
+section.content .gist-syntax .nf {
+    color : #A40000 ;
+}
+
+/* Name.Function */
+section.content .gist-syntax .nn {
+    color : #555753 ;
+}
+
+/* Name.Namespace */
+section.content .gist-syntax .nt {
+    color : #204A87 ;
+}
+
+/* Name.Tag */
+section.content .gist-syntax .nv {
+    color : #204A87 ;
+}
+
+/* Name.Variable */
+section.content .gist-syntax .bp {
+    color : #3465A4 ;
+}
+
+/* Name.Builtin.Pseudo */
+section.content .gist-syntax .vc {
+    color : #3465A4 ;
+}
+
+/* Name.Variable.Class */
+section.content .gist-syntax .vg {
+    color : #3465A4 ;
+}
+
+/* Name.Variable.Global */
+section.content .gist-syntax .vi {
+    color : #3465A4 ;
+}
+
+/* Name.Variable.Instance */
+section.content .gist-syntax .w {
+    color : #BABDB6 ;
+}
+
+/* Text.Whitespace */
+
+section.content .gist-syntax .m {
+    color : #009A9A ;
+}
+
+/* Literal.Number */
+section.content .gist-syntax .mf {
+    color : #009A9A ;
+}
+
+/* Literal.Number.Float */
+section.content .gist-syntax .mh {
+    color : #009A9A ;
+}
+
+/* Literal.Number.Hex */
+section.content .gist-syntax .mi {
+    color : #009A9A ;
+}
+
+/* Literal.Number.Integer */
+section.content .gist-syntax .mo {
+    color : #009A9A ;
+}
+
+/* Literal.Number.Oct */
+
+section.content .gist-syntax .s {
+    color : #CC0000 ;
+}
+
+/* Literal.String */
+section.content .gist-syntax .sb {
+    color : #CC0000 ;
+}
+
+/* Literal.String.Backtick */
+section.content .gist-syntax .sc {
+    color : #CC0000 ;
+}
+
+/* Literal.String.Char */
+section.content .gist-syntax .sd {
+    color : #C4A000 ;
+}
+
+/* Literal.String.Doc */
+section.content .gist-syntax .s2 {
+    color : #CC0000 ;
+}
+
+/* Literal.String.Double */
+section.content .gist-syntax .se {
+    color : #4E9A06 ;
+}
+
+/* Literal.String.Escape */
+section.content .gist-syntax .sh {
+    color : #CE5C00 ;
+}
+
+/* Literal.String.Heredoc */
+section.content .gist-syntax .si {
+    color : #CC0000 ;
+}
+
+/* Literal.String.Interpol */
+section.content .gist-syntax .sx {
+    color : #CC0000 ;
+}
+
+/* Literal.String.Other */
+section.content .gist-syntax .sr {
+    color : #CE5C00 ;
+}
+
+/* Literal.String.Regex */
+section.content .gist-syntax .s1 {
+    color : #CC0000 ;
+}
+
+/* Literal.String.Single */
+section.content .gist-syntax .ss {
+    color : #5C3566 ;
+}
+
+/* Literal.String.Symbol */
+section.content .gist-syntax .il {
+    color : #CC0000 ;
+}
+
+/* Literal.Number.Integer.Long */
+
+section.content .amazon-item-detail,
+section.content .itunes-item-detail {
+    margin : 1em auto ;
+    width : 81% ;
+}
+
+section.content .amazon-item-detail .thumbnail a,
+section.content .itunes-item-detail .thumbnail a {
+    display : block ;
+    text-align : center ;
+}
+
+section.content .amazon-item-detail .thumbnail a img {
+    border : 6px solid #FFFFFF ;
+    box-shadow : 0px 1px 3px #888A85 ;
+}
+
+section.content .itunes-item-detail dl,
+section.content .amazon-item-detail dl {
+    padding : 1.25em 0 ;
+}
+
+section.content .itunes-item-detail dl > *,
+section.content .amazon-item-detail dl > * {
+    display : block ;
+    margin : 0 ;
+    padding : 0 ;
+}
+
+section.content .itunes-item-detail dl > dt,
+section.content .amazon-item-detail dl > dt {
+    width : 3em ;
+    padding : 0 0.5em ;
+    text-align : center ;
+    line-height : 1.5em ;
+}
+
+section.content div.itunes-item-detail dl > dd,
+section.content div.amazon-item-detail dl > dd {
+    margin : -1.5em 0 0 5em ;
+    line-height : 1.5em ;
+}
+
+section.content .itunes-item-figure,
+section.content .amazon-item-figure {
+    margin : 1em ;
+    float : right ;
+    clear : right ;
+    width : 19% ;
+    text-align : center ;
+}
+
+section.content .amazon-item-figure a img {
+    display : inline-block ;
+    background-color : #FFFFFF ;
+    border : 6px solid #FFFFFF ;
+    box-shadow : 0px 1.5px 3px 0px #888A85 ;
+}
+
+@media screen and (max-width: 767px) {
+    section.content .itunes-item-figure,
+    section.content .amazon-item-figure {
+        float : none ;
+        width : auto ;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    section.content .itunes-item-figure,
+    section.content .amazon-item-figure {
+        float : none ;
+        width : auto ;
+    }
+}
+
+div.share {
+    text-align : left ;
+}
+
+div.share a i {
+    font-size : 1.5em ;
+    vertical-align : -0.125em ;
+}
+
+div.share a i.fa-twitter-square       { color : #55acee ; }
+div.share a i.fa-facebook-square      { color : #3b5998 ; }
+div.share a i.fa-google-plus-square   { color : #dd4b39 ; }
+
+div.share div.like_button,
+div.share a.reblog_button {
+    display : inline-block !important;
+    vertical-align : -0.25em ;
+}
+div.meta {
+    text-align : right ;
+}
+
+div.meta a {
+    display : inline-block ;
+    padding : 0.075em 0.75em ;
+
+    font-size : 0.8em ;
+    font-weight : bold ;
+    
+    color : #FFFFFF ;
+    text-shadow : 0px 1px 1px rgba( 0, 0, 0, 0.2 ) ;
+    text-decoration : none ;
+
+    border-radius : 1em ;
+}
+
+div.meta a:link       { background-color : #888A85 ; }
+div.meta a:visited    { background-color : #BABDB6 ; }
+div.meta a:hover      { background-color : #EF2929 ; }
+div.meta a:active     { background-color : #EF2929 ; }
+
+aside.pagination {
+    position : relative ;
+    height : 4em ;
+}
+
+aside.pagination p {
+    margin : 0 ;
+    top : 0 ;
+}
+
+aside.pagination p a {
+    font-size : 4em ;
+    line-height : 1em ;
+}
+
+aside.pagination p a:link       { color : #000000 ; }
+aside.pagination p a:visited    { color : #888A85 ; }
+aside.pagination p a:hover,
+aside.pagination p a:active     { color : #3465A4 ; } 
+
+aside.pagination p.prev {
+    position : absolute ;
+    left : 0 ;
+    text-align : left ;
+}
+
+aside.pagination p.next {
+    position : absolute ;
+    right : 0 ;
+    text-align : right ;
+}
+
+footer[role="contentinfo"] {
+    text-align : center ;
+    font-size  : 0.8em ;
+}
+

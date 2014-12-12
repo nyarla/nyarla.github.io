@@ -1,0 +1,119 @@
+# Blosxom Plugin : include_file
+# Author(s)      : Nyarla, <thotep@nyarla.net>
+# Version        : 2006-05-25
+# License        : MIT-License
+
+package include_file;
+
+use strict;
+use FileHandle;
+
+# --- configurable variables ------
+my $datadir = "/path/to/inc";
+# ---------------------------------
+
+my $fh   = new FileHandle;
+my %files = ();
+
+sub start {
+    if( $datadir and opendir(FILE,$datadir)){
+        foreach my $file (readdir FILE){
+            next unless -f "$datadir/$file";
+            if($fh->open("< $datadir/$file")){
+                $files{$file} = join('',<$fh>);
+                $fh->close;
+            }
+        }
+        closedir(FILE);
+    }
+
+    return 1;
+}
+
+sub head {
+    my($pkg, $path, $head_ref) = @_;
+
+    &include($head_ref);
+
+    return 1;
+}
+
+sub date {
+    my($pkg, $path, $date_ref, $mtime, $dw, $mo, $mo_num, $da, $ti, $yr) = @_;
+
+    &include($date_ref);
+
+    return 1;
+}
+
+sub story {
+    my($pkg, $path, $fn, $story_ref, $title_ref, $body_ref) = @_;
+
+    &include($story_ref);
+
+    return 1;
+}
+
+sub foot {
+    my($pkg, $path, $foot_ref) = @_;
+
+    &include($foot_ref);
+
+    return 1;
+}
+
+sub include {
+    my $text_ref = shift;
+
+    $$text_ref =~ s{\$include_file::(\w+)}{
+        my $file = $1;
+        if($files{$file} =~ m/\$include_file::\w+/){
+            &include(\$files{$file});
+        }
+        "$files{$file}";
+    }egs;
+
+    return $text_ref;
+}
+
+1;
+__END__
+=head1 NAME
+
+Blosxom Plug-in : include_file
+
+=head1 SYNOPSIS
+
+目的: 外部ファイルをflavourに取り込みます。
+
+=head1 AUTHOR
+
+にゃるら、(Nyarla,)
+<thotep@nyarla.net>
+http://nyarla.net/blog/
+
+=head1 SEE ALSO
+
+http://nyarla.net/blog/blosxom-plugin-include-file
+
+=head1 LICENSE
+
+This Blosxom Plug-in Copyright 2006, "Nyarla,"
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
